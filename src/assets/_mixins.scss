@@ -1,0 +1,25 @@
+@mixin Button() {
+	align-self: center;
+	text-decoration: none;
+	font-family: $main-font;
+	font-weight: 500;
+	font-size: clamp(1rem, 0.91rem + 0.377vw, 1.25rem);
+	border-radius: 50px;
+	background-color: transparent;
+	color: black;
+	border: 3px solid rgba(0, 0, 0, 0.5);
+	padding: 20px 68px;
+	cursor: pointer;
+	transition: 0.3s ease;
+
+	@media (max-width: 576px) {
+		padding: 20px;
+		text-align: center;
+		border-width: 2px;
+		width: 100%;
+	}
+
+	&:hover {
+		background-color: rgba(0, 0, 0, 0.1);
+	}
+}
