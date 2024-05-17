@@ -702,6 +702,7 @@ const timerId = setInterval(countdownTimer, 1000)
 	font-family: $main-font;
 	font-weight: 400;
 	padding-bottom: 50px;
+	line-height: 133%;
 
 	&__links {
 		width: 100%;
@@ -727,6 +728,7 @@ const timerId = setInterval(countdownTimer, 1000)
 	font-size: clamp(1rem, 0.91rem + 0.377vw, 1.25rem);
 	font-weight: 400;
 	text-indent: 20px;
+	line-height: 133%;
 
 	&__mark {
 		font-weight: 500;
