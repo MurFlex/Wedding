@@ -659,7 +659,7 @@ const timerId = setInterval(countdownTimer, 1000)
 
 			&_wrap {
 				display: flex;
-				gap: 11px;
+				gap: 30px;
 
 				@media (max-width: 976px) {
 					margin-top: 11px;
