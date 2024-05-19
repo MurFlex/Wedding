@@ -1,12 +1,12 @@
 <template>
 	<div class="introduction">
-		<p>Дорогие {{ guests }},</p>
-		<p>Рады пригласить вас на нашу свадьбу!</p>
+		<p>{{ guests }},</p>
+		<p>Рады пригласить {{ introduction }} на нашу свадьбу!</p>
 	</div>
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import jwtDecrypt from '../helpers/jsonDecrypt'
 import router from '../routes/index'
@@ -17,7 +17,27 @@ const route = useRoute()
 
 const token = route.query.guestData
 
-const guests = computed(() => jwtDecrypt(token).guests.join(' и '))
+const introduction = ref('')
+
+const guests = computed(() => {
+	const decode = jwtDecrypt(token)
+	const guestsDecoded = decode.guests
+	introduction.value = decode.introduction
+	const count = guestsDecoded.length
+
+	switch (count) {
+		case 1:
+			return guestsDecoded[0]
+		case 2:
+			return 'Дорогие ' + guestsDecoded.join(' и ')
+		default:
+			return (
+				'Дорогие ' +
+				guestsDecoded.slice(0, count - 1).join(', ') +
+				` и ${guestsDecoded[count - 1]}`
+			)
+	}
+})
 </script>
 
 <style lang="scss" scoped>
