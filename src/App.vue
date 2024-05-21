@@ -164,8 +164,8 @@
 				фотографии от фотографа.
 			</p>
 			<div class="chat__links">
-				<a href="#" class="chat__link">Telegram</a>
-				<a href="#" class="chat__link">WhatsApp</a>
+				<a href="https://t.me/+NRZefNbMrYU4ODdi" target='_blank' class="chat__link">Telegram</a>
+				<a href="https://chat.whatsapp.com/Dev0HQjCguy2HrWItVENQd" target='_blank'class="chat__link">WhatsApp</a>
 			</div>
 			<p class="chat__paragraph">Присоединяйтесь и будем на связи!</p>
 		</div>
