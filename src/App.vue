@@ -538,7 +538,7 @@ const timerId = setInterval(countdownTimer, 1000)
 		&-time {
 			font-weight: 700;
 			color: darken($color: #696969, $amount: 10%);
-			min-width: 2em;
+			min-width: 2.7em;
 			margin-right: clamp(1.5rem, 0.738rem + 3.208vw, 3.625rem);
 		}
 
